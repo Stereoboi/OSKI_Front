@@ -16,10 +16,10 @@ export function RadioVerticalList({ field, form, options }: any) {
           const uniqueId = `${field.name}-${el}-${index}`;
 
           return (
-            <ListItem key={index} className="p-0">
+            <ListItem key={index} className="p-0 ">
               <label
                 htmlFor={uniqueId}
-                className="flex w-full cursor-pointer items-center px-3 py-2"
+                className="flex w-full cursor-pointer items-center px-3 py-2 "
               >
                 <ListItemPrefix className="mr-3">
                   <Radio
@@ -27,7 +27,7 @@ export function RadioVerticalList({ field, form, options }: any) {
                     ripple={true}
                     checked={field.value === el}
                     onChange={() => form.setFieldValue(field.name, el)}
-                    className="hover:before:opacity-0"
+                    className="hover:before:opacity-0 "
                     containerProps={{
                       className: "p-0",
                     }}
@@ -36,7 +36,7 @@ export function RadioVerticalList({ field, form, options }: any) {
                 </ListItemPrefix>
                 <Typography
                   color="blue-gray"
-                  className="font-medium text-blue-gray-400"
+                  className="font-medium text-blue-gray-400 font-montserrat_Alternates"
                 >
                   {el}
                 </Typography>

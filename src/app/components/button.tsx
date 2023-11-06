@@ -14,7 +14,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({ children, testId }) => {
     <Button
       variant="outlined"
       className="font-righteous text-base bg-white hover:bg-blue-gray-500
-          mt-10
+          mt-2
           "
       onClick={() => router.push(`/testlab/${testId}`)}
     >

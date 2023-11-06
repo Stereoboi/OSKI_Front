@@ -11,6 +11,7 @@ export async function getAllTests() {
       credentials: "same-origin",
       Cookie: `session=${session?.value}; session.sig=${sessionSig?.value}`,
     },
+    next: { revalidate: 0 },
   });
   const data = await res.json();
 

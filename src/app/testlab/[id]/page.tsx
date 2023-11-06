@@ -2,7 +2,12 @@ import React from "react";
 import { getTestById } from "@/app/lib/getTestById";
 import TestCard from "@/app/components/test-card";
 import { Test } from "../../../../types/test-list.types";
-import { cookies } from "next/headers";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Test page",
+  description: "Best way to check your knowledge ",
+};
 
 type Params = {
   params: {
@@ -12,8 +17,6 @@ type Params = {
 
 export default async function TestPage({ params: { id } }: Params) {
   const fetchResult = await getTestById(id);
-
-  console.log(fetchResult);
 
   return (
     <>
